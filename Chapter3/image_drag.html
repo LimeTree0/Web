@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <title>학습 예제 2-124.html</title>
+    <Header>
+        <h2>실습내용: 드래그 앤 드롭 API 실습</h2>
+        <hr>
+    </Header>
+
+    <style>
+        #div1 {width: 200px; height: 150px; padding: 10px; border: 5px solid red;}
+    </style>
+
+    <script>
+        function allowDrop(arg)
+        {
+            arg.preventDefault();
+        }
+        function drag(arg)
+        {
+            arg.dataTransfer.setData("Text", arg.target.id);
+        }
+        function drop(arg)
+        {
+            arg.preventDefault();
+            var data = ev.dataTransfer.getData("Text");
+            arg.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+    <body>
+        <fieldset>
+            <legend>사각형 안으로 구글 이미지를 드래그 앤 드롭 해 보세요!</legend>
+                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <hr>
+            <img id="drag1" src="google.png" draggable="true" ondragstart="drag(event)" />
+        </fieldset>
+    </body>
+</html>

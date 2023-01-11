@@ -18,25 +18,24 @@ a {
     justify-content: space-between;
     align-items: center;
     background-color: var(---background-color);
-    padding: 8px 12px;
 }
 
 .navbar__logo {
     font-size: 24px;
 }
+
 .navbar__logo i {
     color: var(---accept-color);
 }
 
-.navbar__menu {
+.navbar__menu{
     display: flex;
-    list-style: none;
     padding-left: 0;
 }
 
 .navbar__menu li {
+    list-style: none;
     padding: 8px 12px;
-    color: var(---text-color);
 }
 
 .navbar__menu li:hover {
@@ -46,13 +45,14 @@ a {
 
 .navbar__icons {
     display: flex;
-    list-style: none;
     color: var(---text-color);
+    list-style: none;
     padding-left: 0;
 }
 
 .navbar__icons li {
     padding: 8px 12px;
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -66,8 +66,13 @@ a {
         width: 100%;
     }
 
-    .navbar__icons {
+    .navbar__menu li {
+        text-align: center;
         width: 100%;
+    }
+
+    .navbar__icons {
         justify-content: center;
+        width: 100%;
     }
 }

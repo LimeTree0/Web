@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome icon link -->
+    <script src="https://kit.fontawesome.com/88776868f9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Youtube</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="logo">
+            <i class="fab fa-youtube"></i> <!--공백은 fab와 fa-youtube 두 개 클래스가 한 태그 안에 모두 적용됨을 의미-->
+            <span class="title">Youtube</span>
+        </div>
+        <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-ellipsis"></i>
+        </div>
+    </header>
+
+    <!-- player -->
+    <section class="player">
+        <video src="video/chess video2.mp4" controls></video>
+    </section>
+
+    <div class="infoAndUpNext">
+        <!-- Video Info -->
+        <section class="info">
+            <!-- Meta Data -->
+            <div class="metadata">
+                <ul class="hashtags">
+                    <li><a href="#">#Limecoding</a></li>
+                    <li><a href="#">#Chess</a></li>
+                    <li><a href="#">#Happy</a></li>
+                </ul>
+                <div class="titleAndButton">
+                    <span class="title clamp">
+                        클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 
+                        프론트엔드 개발자 입문편: HTML, CSS, Javascript 클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 
+                        프론트엔드 개발자 입문편: HTML, CSS, Javascript
+                    </span>
+                    <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+                </div>
+                <span class="views">1M views 1 month ago</span>
+            </div>
+        
+            <!-- Actions -->
+            <ul class="actions">
+                <li><button><i class="active fas fa-thumbs-up"></i><span>1K</span></button></li>
+                <li><button><i class="fas fa-thumbs-down"></i><span>0</span></button></li>
+                <li><button><i class="fas fa-share"></i><span>Share</span></button></li>
+                <li><button><i class="fas fa-plus"></i><span>Save</span></button></li>
+                <li><button><i class="fab fa-font-awesome-flag"></i><span>Report</span></button></li>
+            </ul>
+
+            <!-- channel Description-->
+            <div class="channel">
+                <div class="metadata">
+                    <img src="img/chess.jpg" alt="" />
+                    <div class="info">
+                        <span class="name">Limecoding</span>
+                        <button class="subscribers">10M subscribers</button>
+                    </div>
+                </div>
+                <button class="subscribe">subscribe</button>
+            </div>
+        </section>
+
+        <!-- upNext -->
+        <setion class="upNext">
+            <span class="title">Up Next</span>
+            <ul>
+                <li class="item">
+                    <div class="imageBox">
+                        <img src="img/chess.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <span class="title">
+                            클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 
+                            프론트엔드 개발자 입문편: HTML, CSS, Javascript
+                        </span>
+                        <span class="name">라임코딩</span>
+                        <span class="views">82K views</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="item">
+                    <div class="imageBox">
+                        <img src="img/chess.jpg" alt="">
+                    </div>  
+                    <div class="info">
+                        <span class="title">
+                            클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 
+                            프론트엔드 개발자 입문편: HTML, CSS, Javascript
+                        </span>
+                        <span class="name">라임코딩</span>
+                        <span class="views">82K views</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="item">
+                    <div class="imageBox">
+                        <img src="img/chess.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <span class="title">
+                            클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 
+                            프론트엔드 개발자 입문편: HTML, CSS, Javascript
+                        </span>
+                        <span class="name">라임코딩</span>
+                        <span class="views">82K views</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+            </ul>
+        </setion>
+    </div>
+
+</body>
+</html>

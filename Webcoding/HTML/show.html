@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #displayNone{
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="../JQuery/jquery-3.1.0.min.js"></script>
+    <script>
+        $(function(){
+            $('#displayNone').slideDown();
+        });
+    </script>
+</head>
+<body>
+    <div id="displayNone">
+        displayNone이 적용된 박스 <br>
+        jQuery의 show 함수로 인해 none값이 block으로 변경되어 표시됨
+    </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box2 {float: left; width: 100px; height: 100px;margin: 20px; background: skyblue;position: fixed;}
+        body {height: 5000px;}
+    </style>
+
+    <script type="text/javascript" src="../JQuery/jquery-3.1.0.min.js"></script>
+    <script>
+        $(function(){
+            //보이기 기능
+            $('#btnShow').click(function(){
+                $('#targetBox').show();
+            });
+
+
+            //숨기기 기능
+            $('#btnHide').click(function(){
+                $('#targetBox').hide();
+            });
+
+            //인사말 기능
+            $('#greeting').click(function(){
+                alert("안녕하세요!!");
+            });
+
+            // 마우스 엔터 기능
+            $("#mouseEnter").mouseenter(function(){
+                alert("마우스를 올리셨군요!");
+            });
+
+            //jquery로 css적용
+            $("#mouseEnter").css("background","skyblue");
+
+            //태그의 텍스트 수정
+            $("#textChange").text("내용이 변경되었습니다!");
+
+            //html 수정
+            box1 = $("#box1");
+ 
+            box1.click(function(){
+                box1Content = box1.html();
+                
+                br = "<br />";
+
+                image = '<img src="http://mybook.everdevel.com/images/happyCat.png" />';
+
+                box1.html(box1Content+ br + image);
+
+                $("#box1 img").css("width", "100px");
+            });
+
+
+            // 애니메이션 기능
+            box2 = $("#box2");
+
+            box2.animate({width : "200px"});
+
+            // 스크롤 기능
+            $(window).scroll(function(){
+                var nowScrollVar = $(this).scrollTop();
+                console.log('스크롤 이벤트 작동 스크롤 값: ' + nowScrollVar);
+
+                if(nowScrollVar >= 1000 && nowScrollVar <= 1100) {
+                    $('#box2').show();
+                }else if(nowScrollVar <= 999) {
+                    $('#box2').hide();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="btnShow" value="보이기">
+    <input type="button" id="btnHide" value="숨기기">
+    <input type="button" id="greeting" value="인사말">
+
+    <div id="targetBox">
+        target box
+    </div>
+
+    <div id="mouseEnter">
+        이 위에 마우스를 올려보세요!
+    </div>
+
+    <div id="textChange">
+        변경 전 내용
+    </div>
+
+    <div id="box1">
+        이 박스를 클릭하면 이미지가 나타납니다.
+    </div>
+    <div id="box2">
+        BOX2
+    </div>
+
+    
+</body>
+</html>
